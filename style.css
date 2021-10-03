@@ -29,6 +29,8 @@ body {
     display: flex;
 }
 
+/*-------- HEADER --------*/
+
 .logo {
     height: 90px;
     padding: 10px;
@@ -49,9 +51,12 @@ header ul {
     gap: 30px;
 }
 
-header a {
+a {
     text-decoration: none;
     color: black;
+}
+
+header a {
     font-size: 20px;
     font-weight: 400;
 }
@@ -60,6 +65,9 @@ header a:hover {
     color: turquoise;
     border-bottom: 1px solid turquoise;
 }
+
+/*-------- MAIN --------*/
+/*-------- BANNER --------*/
 
 .banner {
     background-color: rgb(0, 0, 0);
@@ -94,7 +102,6 @@ header a:hover {
     justify-self: center;
 }
 
-
 .banner-img {
     grid-area: 1 / 2 / 3 / 3;
 }
@@ -104,6 +111,8 @@ header a:hover {
     height: 400px;
     object-fit: cover;
 }
+
+/*-------- STORE --------*/
 
 .store {
     margin-top: 50px;
@@ -120,8 +129,301 @@ header a:hover {
     width: 200px;
 }
 
+.item:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(56, 194, 180);
+}
+
 .item-img {
     height: 200px;
     width: 100%;
     object-fit:cover;
+}
+
+/*-------- FOOTER --------*/
+
+footer {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid grey;
+}
+
+.footer-txt {
+    font-size: 12px;
+    text-align: center;
+}
+
+/*-------- MEDIA QUERY'S --------*/
+
+@media (max-width: 400px) {    
+    .container {
+        max-width: 300px;
+    }
+    
+    /*-------- HEADER --------*/
+    .logo {
+        height: 70px;
+        padding: 5px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+    
+    header ul {
+        padding: 5px;
+        /* flexbox */
+        gap: 5px;
+    }
+    
+    header a {
+        font-size: 13px;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+    }
+    
+    /*-------- MAIN --------*/
+    /*-------- BANNER --------*/
+    
+    .banner {
+        width: 400px;
+        margin-top: 60px;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 15px 30px;
+        /* css grid */
+        grid: 1fr 1fr 3fr / 1fr;
+        gap: 5px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    
+    .banner-title {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 1 / 1 / 2 / 3;
+        align-self: center;
+    }
+    
+    .banner-txt {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 2 / 1 / 3 / 3;
+        align-self: center;
+    }
+    
+    .banner-title, .banner-txt {
+        margin-left: 0px;
+    }
+    
+    .banner-img {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    
+    .banner-car {
+        height: 300px;
+    }
+    
+    /*-------- STORE --------*/
+    
+    .store {
+        grid: repeat(10, 1fr) / 1fr;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .item {
+        width: 300px;
+    }
+
+    .item-desc p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {    
+    .container {
+        max-width: 600px;
+    }
+    
+    /*-------- HEADER --------*/
+    .logo {
+        height: 70px;
+        padding: 5px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        height: 130px;
+    }
+    
+    nav {
+        padding: 5px;
+    }
+    
+    header ul {
+        padding: 5px;
+        /* flexbox */
+        gap: 15px;
+    }
+    
+    header a {
+        font-size: 13px;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+    }
+    
+    /*-------- MAIN --------*/
+    /*-------- BANNER --------*/
+    
+    .banner {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 15px 30px;
+        /* css grid */
+        grid: 1fr 1fr 3fr / 1fr;
+        gap: 5px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    
+    .banner-title {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 1 / 1 / 2 / 3;
+        align-self: center;
+    }
+    
+    .banner-txt {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 2 / 1 / 3 / 3;
+        align-self: center;
+    }
+    
+    .banner-title, .banner-txt {
+        margin-left: 0px;
+    }
+    
+    .banner-img {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    
+    .banner-car {
+        height: 200px;
+    }
+    
+    /*-------- STORE --------*/
+    
+    .store {
+        grid: repeat(5, 1fr) / repeat(2, 1fr);
+        gap: 5px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .item {
+        width: 180px;
+    }
+
+    .item-desc p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1000px) {    
+    .container {
+        max-width: 900px;
+    }
+    
+    /*-------- HEADER --------*/
+    .logo {
+        height: 70px;
+        padding: 5px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        height: 130px;
+    }
+    
+    nav {
+        padding: 5px;
+    }
+    
+    header ul {
+        padding: 5px;
+        /* flexbox */
+        gap: 15px;
+    }
+    
+    header a {
+        font-size: 13px;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+    }
+    
+    /*-------- MAIN --------*/
+    /*-------- BANNER --------*/
+    
+    .banner {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 15px 30px;
+        /* css grid */
+        grid: 1fr 1fr 3fr / 1fr;
+        gap: 5px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    
+    .banner-title {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 1 / 1 / 2 / 3;
+        align-self: center;
+    }
+    
+    .banner-txt {
+        font-size: 13px;
+        /* css grid */
+        grid-area: 2 / 1 / 3 / 3;
+        align-self: center;
+    }
+    
+    .banner-title, .banner-txt {
+        margin-left: 0px;
+    }
+    
+    .banner-img {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    
+    .banner-car {
+        height: 200px;
+    }
+    
+    /*-------- STORE --------*/
+    
+    .store {
+        grid: repeat(4, 1fr) / repeat(3, 1fr);
+        gap: 5px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .item {
+        width: 180px;
+    }
+
+    .item-desc p {
+        font-size: 13px;
+    }
 }
